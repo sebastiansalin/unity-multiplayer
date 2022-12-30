@@ -28,11 +28,16 @@ public class InputManager : NetworkBehaviour
     void FixedUpdate()
     {
         // Tell the playermotor to move using the value from ouir movement action.
-        motor.ProcessMove(onFoot.Movement.ReadValue<Vector2>());
+        if (hasAuthority){
+            motor.ProcessMove(onFoot.Movement.ReadValue<Vector2>());
+        }
     }
     private void LateUpdate() {
-        Vector2 looky = onFoot.Look.ReadValue<Vector2>();
-        look.ProcessLook(looky);
+        if(hasAuthority){
+            Vector2 looky = onFoot.Look.ReadValue<Vector2>();
+            look.ProcessLook(looky);
+        }
+        
     }
 
     private void OnEnable() {
