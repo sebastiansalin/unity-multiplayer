@@ -61,3 +61,6 @@ crashlytics-build.properties
 # Game builds
 GAMEBUILD/
 build2MP/
+
+# .rar packs
+*.rar
