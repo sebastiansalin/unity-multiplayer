@@ -64,3 +64,6 @@ build2MP/
 
 # .rar packs
 *.rar
+
+# user settings
+UserSettings/
