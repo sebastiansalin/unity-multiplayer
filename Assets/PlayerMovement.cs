@@ -17,7 +17,7 @@ public class PlayerMovement : NetworkBehaviour
     private void Update() {
         
         if(hasAuthority){
-                Movement();
+            Movement();
         }
 
         // if(SceneManager.GetActiveScene().name == "Scene_SteamworksGame"){
@@ -37,7 +37,7 @@ public class PlayerMovement : NetworkBehaviour
         float vertical = Input.GetAxis("Vertical");
         
 
-        Vector3 movement = new Vector3(horizontal, vertical);
+        Vector3 movement = new Vector3(horizontal, 0.0f, vertical);
 
         transform.position += movement * speed * Time.deltaTime;
 
