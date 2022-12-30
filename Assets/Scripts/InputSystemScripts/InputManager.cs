@@ -21,22 +21,19 @@ public class InputManager : NetworkBehaviour
         look = GetComponent<PlayerLook>();
 
         onFoot.Jump.performed += ctw => motor.Jump();
-    
+        
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
         // Tell the playermotor to move using the value from ouir movement action.
-        if (hasAuthority){
-            motor.ProcessMove(onFoot.Movement.ReadValue<Vector2>());
-        }
+        motor.ProcessMove(onFoot.Movement.ReadValue<Vector2>());
     }
+    
     private void LateUpdate() {
-        if(hasAuthority){
-            Vector2 looky = onFoot.Look.ReadValue<Vector2>();
-            look.ProcessLook(looky);
-        }
+        Vector2 looky = onFoot.Look.ReadValue<Vector2>();
+        look.ProcessLook(looky);
         
     }
 
