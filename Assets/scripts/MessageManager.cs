@@ -43,6 +43,8 @@ public class MessageManager : NetworkBehaviour
             CmdSendMessageToPlayers(newMessage);
         }
     }
+
+    
     public void HandleNewMessageText(string oldValue, string newValue)
     {
         Debug.Log("HandleNewMessageText with new value " + newValue);
@@ -57,6 +59,8 @@ public class MessageManager : NetworkBehaviour
     {
         messageText.text = newMessage;
     }
+
+
     [Command(requiresAuthority = false)]
     void CmdSendMessageToPlayers(string newMessage)
     {
