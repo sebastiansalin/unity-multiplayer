@@ -1383,7 +1383,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 552.7, y: -12.572052}
+  m_AnchoredPosition: {x: 552.7, y: -12.5720825}
   m_SizeDelta: {x: -1253.582, y: -225.14478}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &684427734
@@ -1429,7 +1429,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1302834675}
   m_HandleRect: {fileID: 1302834674}
   m_Direction: 2
-  m_Value: 0
+  m_Value: 1
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -1791,12 +1791,12 @@ MonoBehaviour:
   disconnectInactiveConnections: 0
   disconnectInactiveTimeout: 60
   authenticator: {fileID: 0}
-  playerPrefab: {fileID: 6881386949736783369, guid: 3d8bdfcc718af0b4583ab980c5ebbfc3,
+  playerPrefab: {fileID: 6881386949736783369, guid: abb54d5afb6d03f46ac14f52e732841a,
     type: 3}
   autoCreatePlayer: 1
   playerSpawnMethod: 0
   spawnPrefabs: []
-  gamePlayerPrefab: {fileID: 8050492772415312412, guid: 3d8bdfcc718af0b4583ab980c5ebbfc3,
+  gamePlayerPrefab: {fileID: 8050492772415312412, guid: abb54d5afb6d03f46ac14f52e732841a,
     type: 3}
   minPlayers: 1
 --- !u!114 &805860450
@@ -3410,7 +3410,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -12.572052}
+  m_AnchoredPosition: {x: 0, y: -12.5720825}
   m_SizeDelta: {x: -200, y: -225.14478}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1764199199
