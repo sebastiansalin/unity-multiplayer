@@ -2,8 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using Mirror;
 
-public class InputManager : MonoBehaviour
+public class InputManager : NetworkBehaviour
 {
 
     private PlayerControls playerInput;
