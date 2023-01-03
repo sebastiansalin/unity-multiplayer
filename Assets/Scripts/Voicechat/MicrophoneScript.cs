@@ -1,12 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Mirror;
 
 public class MicrophoneScript : MonoBehaviour
 {
     public AudioSource source;
     private AudioClip audioclip;
     private string micName;
+    private int frameCount = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,9 +20,16 @@ public class MicrophoneScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(!source.enabled){
+            if(frameCount > 1){
+                source.enabled = true;
+            } else {
+                frameCount += 1;
+            }
+            
+        }
+        
         source.clip = audioclip;
-        Debug.Log(Microphone.IsRecording(micName));
-        Debug.Log(Microphone.GetPosition(micName));
     }
 
     public void MicrophoneToAudio(){
