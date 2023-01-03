@@ -9,7 +9,8 @@ public class MicrophoneScriptMultiplayer : NetworkBehaviour
     private AudioClip audioclip;
     private string micName;
     private int frameCount = 0;
-    public int micNumber = 0; 
+    public int micNumber = 0;
+    private int lastMicNumber = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -27,10 +28,17 @@ public class MicrophoneScriptMultiplayer : NetworkBehaviour
             } else {
                 frameCount += 1;
             }
-            
         }
-        
+        if(lastMicNumber != micNumber){
+            ChangeMic();
+        }
         source.clip = audioclip;
+        lastMicNumber = micNumber;
+    }
+    private void ChangeMic(){
+        MicrophoneToAudio();
+        frameCount = 0;
+        source.enabled = false;
     }
 
     public void MicrophoneToAudio(){
