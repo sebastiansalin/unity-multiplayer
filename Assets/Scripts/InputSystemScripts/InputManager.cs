@@ -12,8 +12,8 @@ public class InputManager : NetworkBehaviour
     private PlayerMotor motor;
     private PlayerLook look;
 
-    // Start is called before the first frame update
-    void Awake() {
+    void Awake()
+    {
         playerInput = new PlayerControls();
         onFoot = playerInput.OnFoot;
 
@@ -21,27 +21,24 @@ public class InputManager : NetworkBehaviour
         look = GetComponent<PlayerLook>();
 
         onFoot.Jump.performed += ctw => motor.Jump();
-        
     }
-
-    // Update is called once per frame
     void FixedUpdate()
     {
         // Tell the playermotor to move using the value from ouir movement action.
         motor.ProcessMove(onFoot.Movement.ReadValue<Vector2>());
     }
-    
-    private void LateUpdate() {
+    private void LateUpdate()
+    {
         Vector2 looky = onFoot.Look.ReadValue<Vector2>();
         look.ProcessLook(looky);
         
     }
-
-    private void OnEnable() {
+    private void OnEnable()
+    {
         onFoot.Enable();
     }
-
-    private void OnDisable() {
+    private void OnDisable()
+    {
         onFoot.Disable();
     }
 }

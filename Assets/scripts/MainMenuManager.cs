@@ -26,23 +26,12 @@ public class MainMenuManager : MonoBehaviour
     public string lobbyName;
 
     public List<GameObject> listOfLobbyListItems = new List<GameObject>();
-    // Start is called before the first frame update
     private void Awake()
     {
         MakeInstance();
         buttons.SetActive(true);
         LobbyListCanvas.SetActive(false);
         CreateLobbyCanvas.SetActive(false);
-    }
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
     void MakeInstance()
     {

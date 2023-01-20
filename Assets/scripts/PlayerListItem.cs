@@ -21,16 +21,9 @@ public class PlayerListItem : MonoBehaviour
 
     protected Callback<AvatarImageLoaded_t> avatarImageLoaded;
 
-    // Start is called before the first frame update
     void Start()
     {
         avatarImageLoaded = Callback<AvatarImageLoaded_t>.Create(OnAvatarImageLoaded);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
     public void SetPlayerListItemValues()
     {

@@ -6,6 +6,7 @@ using Mirror;
 using Steamworks;
 using System.Linq;
 
+// Manager for creating steam multiplayer lobbies.
 public class LobbyManager : MonoBehaviour
 {
     public static LobbyManager instance;
@@ -24,7 +25,6 @@ public class LobbyManager : MonoBehaviour
 
 
     public ulong currentLobbyId;
-    // Start is called before the first frame update
     private MyNetworkManager game;
     private MyNetworkManager Game
     {
@@ -43,11 +43,6 @@ public class LobbyManager : MonoBehaviour
         ReadyUpButton.gameObject.SetActive(true);
         ReadyUpButton.GetComponentInChildren<Text>().text = "Ready Up";
         StartGameButton.gameObject.SetActive(false);
-    }
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
     void MakeInstance()
     {

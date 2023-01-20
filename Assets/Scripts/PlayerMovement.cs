@@ -4,32 +4,17 @@ using UnityEngine;
 using Mirror;
 using UnityEngine.SceneManagement;
 
+// Controls player movement such that player inputs only control their own character.
 public class PlayerMovement : NetworkBehaviour
 {
     public float speed = 2.0f;
-    //public GameObject PlayerModel;
 
-    // private void Start()
-    // {
-    //     PlayerModel.SetActive(false);
-    // }
-
-    private void Update() {
-        
-        if(hasAuthority){
+    private void Update()
+    {
+        if(hasAuthority)
+        {
             Movement();
         }
-
-        // if(SceneManager.GetActiveScene().name == "Scene_SteamworksGame"){
-        //     if(PlayerModel.activeSelf == false){
-        //         PlayerModel.SetActive(true);
-        //     }
-
-        //     if(hasAuthority){
-        //         Movement();
-        //     }
-
-        // }
     }
     public void Movement()
     {

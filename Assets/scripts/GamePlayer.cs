@@ -55,11 +55,6 @@ public class GamePlayer : NetworkBehaviour
         DontDestroyOnLoad(this.gameObject);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
     public void HandlePlayerNameUpdate(string oldValue, string newValue)
     {
         Debug.Log("Player name has been updated for: " + oldValue + " to new value: " + newValue);
