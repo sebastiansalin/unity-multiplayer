@@ -1833,12 +1833,12 @@ MonoBehaviour:
   disconnectInactiveConnections: 0
   disconnectInactiveTimeout: 60
   authenticator: {fileID: 0}
-  playerPrefab: {fileID: 6881386949736783369, guid: 3fa095476a234fd41bd5be50ab9b58d7,
+  playerPrefab: {fileID: 6881386949736783369, guid: b02b5f8ddf908d14b9f6bc98c93e2fa0,
     type: 3}
   autoCreatePlayer: 1
   playerSpawnMethod: 0
   spawnPrefabs: []
-  gamePlayerPrefab: {fileID: 8050492772415312412, guid: 3fa095476a234fd41bd5be50ab9b58d7,
+  gamePlayerPrefab: {fileID: 8050492772415312412, guid: b02b5f8ddf908d14b9f6bc98c93e2fa0,
     type: 3}
   minPlayers: 1
 --- !u!114 &805860450
